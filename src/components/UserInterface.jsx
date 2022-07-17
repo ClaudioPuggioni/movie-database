@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
 import CardFullView from "./CardFullView";
-import { BrowserRouter as Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 function UserInterface() {
   let [movieSelection, setMovieSelection] = useState(null);
