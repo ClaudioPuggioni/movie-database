@@ -31,7 +31,9 @@ function UserInterface() {
   let selectMovie = (i) => setSelected(i);
 
   return movieSelection === null ? (
-    <div id="moviesContainer">Loading...</div>
+    <div id="moviesContainer">
+      <img src="loading.gif" alt="Loading" />
+    </div>
   ) : !selected ? (
     <div id="moviesContainer">
       {movieSelection.map((ele) => {
