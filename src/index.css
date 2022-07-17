@@ -1,13 +1,196 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  background-color: RGB(40, 44, 51);
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+#moviesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+
+  height: 100%;
+  width: 95vw;
+}
+
+.movieCard {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+  height: 250px;
+  width: 167px;
+  border: none;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.cardDetail {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: -100px;
+  height: 100px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.88);
+
+  transition: all 500ms ease-out;
+}
+
+.movieCard:hover .cardDetail {
+  bottom: 0;
+}
+
+.cardDetailTitle {
+  padding: 4px 10px;
+  margin-top: 1px;
+  text-align: left;
+  align-self: flex-start;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+.cardDetailBody {
+  display: flex;
+  border-top: 1px solid rgb(7, 5, 57);
+  align-items: center;
+  height: 100%;
+  width: 148px;
+}
+.cardDetailBodyTxt {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  max-width: 125px;
+  max-height: 60px;
+  padding-right: 3px;
+
+  font-size: 10px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.cardDetailBodyRating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 20px;
+
+  color: white;
+  font-size: 10px;
+  background-color: red;
+  border: none;
+  border-radius: 3px;
+}
+
+.cardFullPage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: cover;
+  font-family: Poppins;
+}
+
+.cardFullContainer {
+  position: relative;
+  height: 500px;
+  max-width: 1030px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.xBtn {
+  height: 40px;
+  width: 40px;
+
+  position: absolute;
+  top: -21px;
+  right: -21px;
+  filter: invert(100%);
+}
+
+.cardFullPoster {
+  max-width: 340px;
+  margin-right: 120px;
+  border: 5px solid black;
+  border-radius: 13px;
+}
+
+.cardFullBody {
+  color: white;
+}
+.cardFullTitle {
+  font-size: 31px;
+  font-weight: 600;
+}
+.cardFullTagline {
+  margin: 15px 0px;
+
+  font-size: 17px;
+  font-style: italic;
+}
+.cardFullSynopsis {
+  font-size: 12px;
+}
+.cardFullGenres {
+  margin: 10px 0px;
+}
+
+.buttonGenres {
+  padding: 6px 10px;
+  margin-right: 10px;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 7px;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.buttonTrailer {
+  width: 135px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 9px 10px;
+  padding-left: 13px;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 11px;
+
+  font-size: 13px;
+}
+.playImg {
+  margin-left: 10px;
+  width: 24px;
 }
